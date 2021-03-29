@@ -23,9 +23,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flame: ^0.28.0
+  flame: ^0.29.3
   shared_preferences: ^0.5.12+4
   liquid_swipe: ^1.5.0
+  soundpool: ^1.1.3
+  uuid: ^2.2.2
+  # audioplayers: ^0.17.3
 
 
 
@@ -37,7 +40,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+dependency_overrides:
+  image: 2.0.7
 
 
 # For information on the generic Dart part of this file, see the
@@ -48,9 +52,32 @@ flutter:
   uses-material-design: true
   assets:
     - assets/audio/
-    - assets/images/boxer/first page one.png
-    - assets/images/boxer/first page-2 two.png
+    # - assets/images/boxer/first page one.png
+    # - assets/images/boxer/first page-2 two.png
     - assets/images/boxer/punch-left.png
+    - assets/audio/bgm.ogg
+    - assets/audio/swish-1.ogg
+    - assets/audio/swish-2.ogg
+    - assets/audio/swish-3.ogg
+    - assets/audio/swish-4.ogg
+    - assets/audio/swish-5.ogg
+    - assets/audio/swish-6.ogg
+    - assets/audio/swish-7.ogg
+    - assets/audio/swish-8.ogg
+    - assets/audio/swish-9.ogg
+    - assets/audio/swish-10.ogg
+    - assets/audio/swish-11.ogg
+    - assets/audio/swish-12.ogg
+    - assets/audio/swish-13.ogg
+    - assets/images/background.png
+    - assets/images/boxer/dizzy.png
+    - assets/images/boxer/idle.png
+    - assets/images/boxer/punch-left.png
+    - assets/images/boxer/punch-right.png
+    - assets/images/boxer/punch-up.png
+    - assets/images/markers.png
+    - assets/images/perfect-time.png
+    - assets/images/title.png
 
    
 
