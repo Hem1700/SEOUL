@@ -8,7 +8,7 @@ import '../Screens/shadow_training.dart';
 
 class Boxer {
   final ShadowTraining game;
-  final double punchDuration = .08;
+  final double punchDuration = .2;
   bool initialized;
   BoxerStatus status;
   double backToIdle;
@@ -128,7 +128,7 @@ class Boxer {
     if (!initialized) return;
 
     if (status == BoxerStatus.idle) {
-      idleIndex += idleSprite.length * t * 1.5;
+      idleIndex += idleSprite.length * t * 2;
       while (idleIndex > idleSprite.length) {
         idleIndex -= idleSprite.length;
       }

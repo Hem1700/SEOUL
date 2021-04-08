@@ -70,6 +70,8 @@ flutter:
     - assets/audio/swish-12.ogg
     - assets/audio/swish-13.ogg
     - assets/images/background.png
+    - assets/images/city.jpeg
+    - assets/images/temple.png
     - assets/images/boxer/dizzy.png
     - assets/images/boxer/idle.png
     - assets/images/boxer/punch-left.png
@@ -78,6 +80,12 @@ flutter:
     - assets/images/markers.png
     - assets/images/perfect-time.png
     - assets/images/title.png
+    - assets/images/boxingpng/b-idle.png
+    - assets/images/boxingpng/b-left.png
+    - assets/images/boxingpng/b-right.png
+    - assets/images/boxingpng/b-uppercut.png
+    - assets/images/boxer/firstpage-2.png
+    - assets/images/boxer/firstpageone.png
 
    
 
