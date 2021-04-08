@@ -16,9 +16,8 @@ class HeroType {
     this.id,
   });
 
-  
-
   List<HeroType> createSampleList() {
+    // ignore: deprecated_member_use
     List _heroType = List<HeroType>();
     return _heroType
       ..add(HeroType(
@@ -29,17 +28,17 @@ class HeroType {
         id: 1,
       ))
       ..add(HeroType(
-        title: 'Temple',
-        image: 'assets/images/temple.png',
-        //subTitle: '',
-        materialColor: Colors.yellow,
-        id: 2,
-      ))
-      ..add(HeroType(
         title: 'Mountains',
         image: 'assets/images/background.png',
         //subTitle: '',
         materialColor: Colors.lightGreen,
+        id: 2,
+      ))
+      ..add(HeroType(
+        title: 'Temple',
+        image: 'assets/images/temple.png',
+        //subTitle: '',
+        materialColor: Colors.yellow,
         id: 3,
       ));
   }

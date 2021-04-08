@@ -12,6 +12,7 @@ class BackgroundPage extends StatefulWidget {
 }
 
 class _BackgroundPageState extends State<BackgroundPage> {
+  // ignore: deprecated_member_use
   List _heroTypeList = List<HeroType>();
   double _screenWidthAdjustment;
   @override
@@ -91,6 +92,10 @@ class _BackgroundPageState extends State<BackgroundPage> {
                   ),
                 ),
                 onTap: () {
+                  setState(() {
+                    global.background_id = _heroTypeList[index].id;
+                    print(global.background_id);
+                  });
                   // Navigator.of(context).push(
                   //   MaterialPageRoute(
                   //     fullscreenDialog: true,
@@ -108,11 +113,11 @@ class _BackgroundPageState extends State<BackgroundPage> {
                           Animation<double> secondaryAnimation) {
                         return Details(
                           heroType: HeroType(
-                              title: _heroTypeList[index].title,
-                              image: _heroTypeList[index].image,
-                              id: global.background_id,
-                              materialColor:
-                                  _heroTypeList[index].materialColor),
+                            title: _heroTypeList[index].title,
+                            image: _heroTypeList[index].image,
+                            materialColor: _heroTypeList[index].materialColor,
+                            id: _heroTypeList[index].id,
+                          ),
                         );
                       },
                       transitionsBuilder: (BuildContext context,
