@@ -1,12 +1,12 @@
 import 'dart:async'; //for timer
 //import 'package:flame/time.dart';
 import 'package:flutter/material.dart';
+import 'package:seoul/Screens/bg.dart';
 import './model/slide.dart';
-import './screens/bg.dart';
 //import './SelectPlayer.dart';
 import './widgets/slideitems.dart';
 //import './model/hero.dart';
-import './widgets/startgame.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -25,6 +25,7 @@ class _MyAppState extends State<MyApp> {
       title: 'SEOUL',
       home: MyHomePage(),
       debugShowCheckedModeBanner: false,
+      
     );
   }
 }
@@ -111,7 +112,7 @@ class _MyHomePageState
                     onPressed: () {
                       setState(() {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => BackgroundPage()));
+                            builder: (context) => BackgroundScreen()));
                       });
                     },
                     shape: RoundedRectangleBorder(

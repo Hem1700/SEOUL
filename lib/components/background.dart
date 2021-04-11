@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import '../Screens/shadow_training.dart';
 import '../globals.dart' as global;
 
-Sprite background(int id, String image) {
+Sprite _backgroundimage(int id, String image) {
   if (id == 1) {
     image = 'city.jpeg';
   } else if (id == 2) {
@@ -22,10 +22,7 @@ class Background {
 
   Background(this.game) {
     rect = Rect.fromLTWH(0, -22, 9, 22);
-    sprite = background(global.background_id, '');
-    // global.background_id == 1
-    //     ? Sprite('city.jpeg')
-    //     : Sprite('background.png'); //Sprite('background.png');
+    sprite = _backgroundimage(global.background_id, '');
   }
 
   void render(Canvas c) {

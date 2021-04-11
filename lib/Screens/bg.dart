@@ -1,17 +1,16 @@
-//import 'dart:html';
-
 import 'package:flutter/material.dart';
 import '../widgets/details.dart';
 import '../model/hero.dart';
 import '../globals.dart' as global;
-//import '';
 
-class BackgroundPage extends StatefulWidget {
+
+class BackgroundScreen extends StatefulWidget {
+  static const routeName = 'background';
   @override
-  _BackgroundPageState createState() => _BackgroundPageState();
+  _BackgroundScreenState createState() => _BackgroundScreenState();
 }
 
-class _BackgroundPageState extends State<BackgroundPage> {
+class _BackgroundScreenState extends State<BackgroundScreen> {
   // ignore: deprecated_member_use
   List _heroTypeList = List<HeroType>();
   double _screenWidthAdjustment;

@@ -1,8 +1,12 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:seoul/Screens/home.dart';
+import 'package:seoul/main.dart';
+import 'package:seoul/widgets/slideitems.dart';
 import '../widgets/punch.dart';
 import '../Screens/shadow_training.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'bg.dart';
 
 class ShadowTrainingUI extends StatefulWidget {
   final ShadowTrainingUIState state = ShadowTrainingUIState();
@@ -68,6 +72,22 @@ class ShadowTrainingUIState extends State<ShadowTrainingUI>
           } else {
             // BGM.pause();
           }
+          update();
+        },
+      ),
+    );
+  }
+
+  Widget changeBackground() {
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: IconButton(
+        icon: Icon(Icons.add_box),
+        color: Colors.white,
+        onPressed: () {
+          Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) => BackgroundScreen()));
+
           update();
         },
       ),
@@ -145,6 +165,22 @@ class ShadowTrainingUIState extends State<ShadowTrainingUI>
     );
   }
 
+  Widget endGame() {
+    return Padding(
+        padding: EdgeInsets.all(9.0),
+        child: IconButton(
+          icon: Icon(
+            Icons.logout,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => BackgroundScreen()));
+            update();
+          },
+        ));
+  }
+
   Widget topControls() {
     return Padding(
       padding: EdgeInsets.only(top: 5, left: 5, right: 15),
@@ -153,6 +189,8 @@ class ShadowTrainingUIState extends State<ShadowTrainingUI>
           bgmControlButton(),
           sfxControlButton(),
           helpButton(),
+          changeBackground(),
+          endGame(),
           spacer(),
           highScoreDisplay(),
         ],
